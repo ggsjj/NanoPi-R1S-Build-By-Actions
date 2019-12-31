@@ -11,9 +11,9 @@
 name: NanoPi-R1s H5 OpenWrt 19.07 Build
 
 on:
-  # push:
-  #   branches: 
-  #     - master
+  push:
+    branches: 
+      - master
   # schedule:
   #   - cron: 0 20 * * *
 
@@ -82,7 +82,6 @@ jobs:
           cd friendlywrt-h5/friendlywrt/package
           git clone https://github.com/shadowsocks/luci-app-shadowsocks.git
 
-
       - name: Update Target.mk
         run: |
           cd friendlywrt-h5/friendlywrt/include 
@@ -105,7 +104,7 @@ jobs:
         run: |
           cd friendlywrt-h5/friendlywrt
           rm -f ./.config*
-          wget https://raw.githubusercontent.com/skytotwo/NanoPi-R1S-Build-By-Actions/master/new-ss-r1s-h5-config
+          wget https://raw.githubusercontent.com/skytotwo/NanoPi-R1S-Build-By-Actions/master/ss-r1s-h5-config
           cp r1s-h5-config .config
       
       - name: Download package
