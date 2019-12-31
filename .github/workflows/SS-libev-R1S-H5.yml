@@ -81,6 +81,8 @@ jobs:
         run: |
           cd friendlywrt-h5/friendlywrt/package
           git clone https://github.com/shadowsocks/luci-app-shadowsocks.git
+          git clone https://github.com/shadowsocks/openwrt-feeds.git
+          git clone https://github.com/shadowsocks/openwrt-shadowsocks.git
 
       - name: Update Target.mk
         run: |
