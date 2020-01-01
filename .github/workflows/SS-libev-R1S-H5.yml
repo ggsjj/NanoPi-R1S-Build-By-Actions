@@ -11,14 +11,15 @@
 name: NanoPi-R1s H5 Build ss-libev
 
 on:
-  # push:
-  #   branches: 
-  #     - master
+  push:
+    branches: 
+      - master
+
   # schedule:
   #   - cron: 0 20 * * *
 
-  release:
-    types: [published]
+  # release:
+  #   types: [published]
 
   # watch:
   #   types: [started]
@@ -83,6 +84,7 @@ jobs:
           git clone https://github.com/shadowsocks/luci-app-shadowsocks.git
           git clone https://github.com/shadowsocks/openwrt-feeds.git
           git clone https://github.com/shadowsocks/openwrt-shadowsocks.git
+          git clone https://github.com/chenhw2/openwrt-v2ray-plugin.git
 
       - name: Update Target.mk
         run: |
