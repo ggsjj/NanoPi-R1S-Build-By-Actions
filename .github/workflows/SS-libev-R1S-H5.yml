@@ -13,7 +13,7 @@ name: NanoPi-R1s H5 Build ss-libev
 on:
   push:
     branches: 
-      - master
+  #     - master
 
   # schedule:
   #   - cron: 0 20 * * *
